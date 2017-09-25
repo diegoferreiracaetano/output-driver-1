@@ -1,4 +1,4 @@
-package com.google.android.things.contrib.driver.output;
+package br.com.autodoc.output;
 
 import android.os.Handler;
 import android.util.Log;

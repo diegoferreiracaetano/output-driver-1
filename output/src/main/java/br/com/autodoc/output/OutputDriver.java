@@ -1,4 +1,4 @@
-package com.google.android.things.contrib.driver.output;
+package br.com.autodoc.output;
 
 import android.view.InputDevice;
 import android.view.KeyEvent;
@@ -9,7 +9,7 @@ import com.google.android.things.userdriver.UserDriverManager;
 import java.io.IOException;
 
 
-public class OutputDriver extends  Output implements AutoCloseable {
+public class OutputDriver extends Output implements AutoCloseable {
     private static final String TAG = OutputDriver.class.getSimpleName();
     private static final String DRIVER_NAME = "Output";
     private static final int DRIVER_VERSION = 1;
