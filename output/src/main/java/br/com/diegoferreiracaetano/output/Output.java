@@ -8,10 +8,6 @@ import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.PeripheralManagerService;
 
 import java.io.IOException;
-
-
-
-
 public class Output implements AutoCloseable {
     private static final String TAG = Output.class.getSimpleName();
 
