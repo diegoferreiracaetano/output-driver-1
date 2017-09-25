@@ -13,9 +13,8 @@ import java.io.IOException;
 public class Output implements AutoCloseable {
     private static final String TAG = Output.class.getSimpleName();
 
-    private Handler mDelayHadler;
-    private Handler mTimeOutHadler;
     private Handler mRepetionHadler;
+    private Handler mTimeOutHadler;
     private OnOutputEventListener mListener;
     private boolean mState = true;
     private long mDebounceDelay = ViewConfiguration.getTapTimeout();
@@ -30,9 +29,8 @@ public class Output implements AutoCloseable {
     public Output(String pin) throws IOException {
         PeripheralManagerService pioService = new PeripheralManagerService();
         mOutputGpio = pioService.openGpio(pin);
-        mDelayHadler = new Handler();
-        mTimeOutHadler = new Handler();
         mRepetionHadler = new Handler();
+        mTimeOutHadler = new Handler();
 
         try {
             mOutputGpio.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW);
@@ -84,7 +82,7 @@ public class Output implements AutoCloseable {
     */
     public void toggle(){
         turn(true);
-        mDelayHadler.postDelayed(new Runnable() {
+        mRepetionHadler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 turn(false);
@@ -98,7 +96,7 @@ public class Output implements AutoCloseable {
    *  Blink led emit repetion
    */
     public void toggleRepeat(){
-        mDelayHadler.postDelayed(postRepetion,mDebounceDelay);
+        mRepetionHadler.postDelayed(postRepetion,mDebounceDelay);
     }
 
 
@@ -113,7 +111,7 @@ public class Output implements AutoCloseable {
             mState = !mState;
             mListener.onOutputEvent(true);
             mListener.onOutputEvent(false);
-            mDelayHadler.postDelayed(this,mDebounceDelay);
+            mRepetionHadler.postDelayed(this,mDebounceDelay);
         }
     };
 
