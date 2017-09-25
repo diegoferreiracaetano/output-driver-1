@@ -18,9 +18,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.3'
-
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         minSdkVersion 24
         targetSdkVersion 24
@@ -31,30 +30,14 @@ android {
     }
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-
-            repository(url: "file:///C:/gradle/rep/")
-            pom.groupId = "output"
-            pom.artifactId = "0.0.1"
-            pom.version = "br.com.autodoc"
-        }
-    }
-}
-task install(dependsOn: uploadArchives)
 
 dependencies {
-    compile 'com.android.support:support-annotations:24.2.0'
+    compile 'com.android.support:support-annotations:26.0.2'
     provided 'com.google.android.things:androidthings:0.4-devpreview'
 
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'org.mockito:mockito-core:1.10.19'
-    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
-    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
-
-    testCompile 'org.powermock:powermock-module-junit4:1.6.6'
-    testCompile 'org.powermock:powermock-classloading-base:1.6.6'
-    testCompile 'org.powermock:powermock-classloading-xstream:1.6.6'
-    testCompile 'org.powermock:powermock-api-mockito:1.6.6'
+    androidTestImplementation ('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    
 }
