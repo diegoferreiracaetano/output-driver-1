@@ -1,5 +1,3 @@
-[![N|Solid](http://www.autodoc.com.br/site/informativo/qr/img/logo-autodoc.png)](http://site.autodoc.com.br/)
-
 # Output - Driver
 
 Android Things user-space drivers [![](https://jitpack.io/v/diegoferreiracaetano/output-driver.svg)](https://jitpack.io/#diegoferreiracaetano/output-driver)
