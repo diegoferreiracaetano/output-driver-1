@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.autodoc.output">
+    package="br.com.diegoferreiracaetano.output">
     <application>
         <uses-library android:required="false" android:name="com.google.android.things"/>
     </application>
