@@ -2,7 +2,7 @@
 
 # Output - Driver
 
-Android Things user-space drivers [![Build Status](https://travis-ci.org/androidthings/contrib-drivers.svg?branch=master)](https://travis-ci.org/androidthings/contrib-drivers)
+Android Things user-space drivers [![](https://jitpack.io/v/diegoferreiracaetano/output-driver.svg)](https://jitpack.io/#diegoferreiracaetano/output-driver)
 =================================
 
 Sample peripheral drivers for Android Things.
