@@ -28,7 +28,7 @@ allprojects {
 Add in dependecies
 ```gradle
 dependencies {
-	compile 'com.github.autodocdev:output:1.0.0'
+	compile 'com.github.autodocdev:output-driver:1.0.0'
 }
 ```
 
