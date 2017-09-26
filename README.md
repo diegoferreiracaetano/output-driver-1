@@ -1,6 +1,8 @@
+[![N|Solid](http://www.autodoc.com.br/site/informativo/qr/img/logo-autodoc.png)](http://site.autodoc.com.br/)
+
 # Output - Driver
 
-Android Things user-space drivers [![](https://jitpack.io/v/diegoferreiracaetano/output-driver.svg)](https://jitpack.io/#diegoferreiracaetano/output-driver)
+Android Things user-space drivers [![Build Status](https://travis-ci.org/androidthings/contrib-drivers.svg?branch=master)](https://travis-ci.org/androidthings/contrib-drivers)
 =================================
 
 Sample peripheral drivers for Android Things.
@@ -26,13 +28,15 @@ allprojects {
 Add in dependecies
 ```gradle
 dependencies {
-	 compile 'com.github.diegoferreiracaetano:output-driver:1.0.0'
+	compile 'com.github.autodocdev:output:1.0.0'
 }
 ```
 
 
 License
 -------
+
+Copyright 2017 Autodoc Inc.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for

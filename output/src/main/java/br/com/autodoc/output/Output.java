@@ -1,4 +1,4 @@
-package br.com.diegoferreiracaetano.output;
+package br.com.autodoc.output;
 
 import android.os.Handler;
 import android.util.Log;

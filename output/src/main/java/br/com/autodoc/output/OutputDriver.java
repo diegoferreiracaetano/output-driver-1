@@ -1,4 +1,4 @@
-package br.com.diegoferreiracaetano.output;
+package br.com.autodoc.output;
 
 import android.view.InputDevice;
 import android.view.KeyEvent;
